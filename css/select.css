@@ -1,0 +1,90 @@
+/* Fenêtre du navigateur */
+body {
+	background-color: #111;
+}
+
+/* Chargement de la police */ 
+@font-face {
+    font-family: "Karate";
+    src: url('karate.ttf');
+}
+
+/* Fenêtre de sélection */ 
+#select {
+	position: absolute;
+	margin: auto;
+	border: 8px ridge #800;
+	background-image: url('../assets/background.png');
+	width: 40em;
+	height: 30em;
+	left: 25%;
+}
+
+/* Titre "Selection" */
+h1 {
+	margin-right: 1.6em;
+	color: #800;
+	font-family: "Karate";
+	font-size: 3em;
+	text-align: center;
+}
+
+/* Bouton de retour */ 
+.return {
+	display: inline-block;
+	font-weight: bolder;
+	float: left;
+	margin-top: 1em;
+	margin-left: 1em;
+	text-align: center;
+	font-family: "Comic Sans MS";
+	color: #FFFFFF;
+	border-radius: 40px;
+	font-size: 1.4em;
+	border: 4px solid #600;
+	padding-bottom: 1em;
+	background-color: #800;
+	width: 2em;
+	height: 2em;
+}
+
+/* Bouton de retour survolé */ 
+.return:hover {
+	background-color: #440000;
+}
+
+/* Boutons de sélection débloqué */
+.level {
+	display: inline-block;
+	margin: 1em 1em 0.4em 1.7em;
+	font-family: "Karate";
+	color: #FFFFFF;
+	border-radius: 20px;
+	font-size: 1.2em;
+	border: 4px solid #600;
+	background-color: #800;
+	text-align: center;
+	width: 3.2em;
+	height: 4em;
+}
+
+/* Bouton de sélection débloqué survolé */
+.level:hover {
+	background-color: #440000;
+}
+
+/* Boutons de sélection bloqué */
+.levelLock {
+	display: inline-block;
+	margin: 1em 1em 0.4em 1.7em;
+	font-family: "Karate";
+	color: #FFFFFF;
+	border-radius: 20px;
+	font-size: 1.2em;
+	border: 4px solid #600;
+	text-align: center;
+	background-image: url('../assets/locked.png');
+	background-size: 5.2em 7em;
+	width: 3.2em;
+	height: 4em;
+}

@@ -1,0 +1,53 @@
+/* Fenêtre du navigateur */
+body {
+	background-color: #111;
+}
+
+/* Chargement de la police */ 
+@font-face {
+    font-family: "Karate";
+    src: url('karate.ttf');
+}
+
+/* Fenêtre du winscreen */ 
+#winscreen {
+	position: absolute;
+	margin: auto;
+	border: 8px ridge #800;
+	background-image: url('../assets/background.png');
+	width: 40em;
+	height: 30em;
+	left: 25%;
+}
+
+/* Titre "Level Completed !" */
+h1 {
+	color: #800;
+	font-family: "Karate";
+	font-size: 3em;
+	padding-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+/* Boutons */
+.buttons {
+	display:inline-block;
+	text-align: center;
+	font-family: "Karate";
+	color: #FFFFFF;
+	border-radius: 100px;
+	font-size: 1.4em;
+	border: 4px solid #600;
+	background-color: #800;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	margin-left: 2.5em;
+	margin-top: 1em; 
+	width: 6em;
+	height: 4em;	
+}
+
+/* Boutons survolé */
+.buttons:hover {
+	background-color: #440000;
+}

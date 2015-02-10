@@ -1,0 +1,52 @@
+﻿/* Fenêtre du navigateur */
+body {
+	background-color: #111;
+}
+
+/* Chargement de la police */ 
+@font-face {
+    font-family: "Karate";
+    src: url('karate.ttf');
+}
+
+/* Titre "Sokoban" */ 
+h1 {
+	color: #800;
+	font-family: "Karate";
+	font-size: 4em;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	text-align: center;
+}
+
+/* Ecran titre */ 
+#title {
+	position: absolute;
+	margin: auto;
+	border: 8px ridge #800;
+	background-image: url('../assets/background.png');
+	width: 40em;
+	height: 30em;
+	left: 25%;
+}
+
+/* Bouton play */
+.buttons {
+	display:block;
+	margin: auto;
+	margin-bottom: 0.4em;
+	text-align: center;
+	font-family: "Karate";
+	color: #FFFFFF;
+	border-radius: 30px;
+	font-size: 1.6em;
+	border: 4px solid #600;
+	background-color: #800;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	width: 10em;
+}
+
+/* Bouton play survolé */
+.buttons:hover {
+	background-color: #440000;
+}

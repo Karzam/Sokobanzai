@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<!-- CSS du login -->
+		<link href="../css/login.css" rel="stylesheet">
+		<title>Sokobanzai</title>
+	</head>
+
+	<body>
+
+		<!-- ********************************************************************************
+
+											Ecran de login           
+		
+		********************************************************************************* -->
+		
+		<div id="home">  
+
+			<!-- Titre -->
+			<h1>SOKOBANZAI !</h1>
+
+			<!-- Demande de pseudo -->
+			<p> Quel est votre nom, apprenti ninja ? </p>
+			
+			<!-- Login -->
+			<form method="post" id="loginForm">
+		
+				<input type="text" name="login" id="login" size="20" maxlength="21"/>
+
+				<input type="submit" name="validation" id="validation" value="Valider">
+			
+			</form>
+
+		</div>
+
+		<!-- ********************************************************************************
+
+												Ecran titre           
+		
+		********************************************************************************* -->
+
+		<div id="title">  
+
+			<!-- Titre -->
+			<h1>SOKOBANZAI !</h1>
+
+			<!-- Play -->
+			<input type="submit" value="  Jouer  " class="buttons goSelect"/>
+
+			<!-- Help -->
+			<input type="button" value="  Aide  " class="buttons goHelp"/>
+
+			<!-- Highscores -->
+			<input type="button" value=" Scores " class="buttons goScores"/>
+
+		</div>
+
+		<!-- ********************************************************************************
+
+											Ecran de sélection            
+		
+		********************************************************************************* -->
+
+		<div id="select"> 
+
+			<!-- Bouton de retour -->
+			<input type="button" value="&#8592" class="return goTitle"/> 
+
+			<!-- Titre -->
+			<h1>SELECTION</h1>
+
+			<!-- Niveaux -->
+			<div class="level" id="1"><p> 1 </p> </div>
+
+			<div class="level" id="2"><p> 2 </p> </div>
+
+			<div class="level" id="3"><p> 3 </p> </div>
+
+			<div class="level" id="4"><p> 4 </p> </div>
+
+			<div class="level" id="5"><p> 5 </p> </div>
+
+			<div class="level" id="6"><p> 6 </p> </div>
+
+			<div class="level" id="7"><p> 7 </p> </div>
+
+			<div class="level" id="8"><p> 8 </p> </div>
+
+			<div class="level" id="9"><p> 9 </p> </div>
+
+			<div class="level" id="10"><p> 10 </p> </div>
+
+			<div class="level" id="11"><p> 11 </p> </div>
+
+			<div class="level" id="12"><p> 12 </p> </div>
+
+			<div class="level" id="13"><p> 13 </p> </div>
+
+			<div class="level" id="14"><p> 14 </p> </div>
+
+			<div class="level" id="15"><p> 15 </p> </div>
+
+		</div>
+
+		<!-- ********************************************************************************
+
+											Ecran de level         
+		
+		********************************************************************************* -->
+
+		<div id="game"> 
+
+			<!-- Retour -->
+			<input type="button" value="&#8592" class="return returnSelect"/> 
+
+			<!-- Titre défini dans Tileset -->
+			<h1></h1>
+
+			<!-- Interface -->
+			<div id="interface">
+
+				<!-- Score -->
+				<div id="score"><img src="../assets/pas.png" width="80"><p></p></div> 
+
+				<!-- Special Feature -->
+				<div id="special"><img src="../assets/special.png" width="60"><p></p></div>
+
+				<!-- Undo -->
+				<input type="button" id="undo" onclick="player.undo()"/>	
+
+				<!-- Redo -->
+				<input type="button" id="redo" onclick="player.redo()"/>
+
+				<!-- Restart -->
+				<input type="button" id="restart"/>
+			
+			</div>
+
+			<!-- Tileset -->
+			<div id="tileset"></div>
+
+		</div>
+
+		<!-- ********************************************************************************
+
+											  Winscreen           
+		
+		********************************************************************************* -->
+
+		<div id="winscreen"> 
+
+			<!-- Titre "Level Completed !" -->
+			<h1>NIVEAU TERMINE !</h1>	
+
+			<!-- Score défini dans Win -->
+			<p id="finalScore"></p>
+
+			<!-- Recommencer -->
+			<input type="button" value="Rejouer" class="buttons restartLevel"/>
+
+			<!-- Sélection -->
+			<input type="button" value="Selection" class="buttons returnSelect"/>
+
+			<!-- Suivant -->
+			<input type="button" value="Suivant" class="buttons" id="nextLevel"/>
+
+		</div>
+
+		<!-- ********************************************************************************
+
+											Ecran d'aide
+		
+		********************************************************************************* -->
+
+		<div id="help"> 
+
+			<!-- Bouton de retour -->
+			<input type="button" value="&#8592" class="return goTitle"/> 
+		
+			<!-- Titre -->
+			<h1>AIDE</h1>
+
+			<!-- Objectif du jeu --> 
+			<div id='objectif'>
+				<p> Le Undo/Redo et l'affichage de la liste des scores pour chaque niveau ne sont pas encore fonctionnels.</p>
+				<p>Vous incarnez un apprenti Ninja et votre Maitre vous a demandé de pousser les bonzais déracinés par le méchant panda des plaines dans des pots. </p> <p>Déplacez-vous grâce a la puissance des touches fléchées de votre clavier. </p> 
+				<p>Appuyez sur la barre espace pour utiliser votre technique secrète, servez-vous en avec sagesse afin de faire rebondir les bonzaïs contre les murs ! Mais attention avec autant de puissance vous risquez de briser votre sabre...</p>
+			</div>
+
+		</div>
+
+		<!-- ********************************************************************************
+
+											Ecran de scores          
+		
+		********************************************************************************* -->
+
+		<div id="scores"> 
+
+			<!-- Bouton de retour -->
+			<input type="button" value="&#8592" class="return goTitle"/> 
+		
+			<!-- Titre -->
+			<h1>SCORES</h1>
+
+		</div>
+
+
+	<!-- Exécution des scripts -->
+	<script src="../tools/jquery-1.11.1.min.js"></script>
+	<script src="../src/utils/htmlManager.js"></script>
+	<script src="../src/utils/connexion.js"></script>
+	<script src="../src/utils/displayLevelState.js"></script>
+	<script src="../maps/levelDesign.json"></script>
+	<script src="../src/utils/converseJsonToArray.js"></script>
+	<script src="../src/utils/getLevelSelected.js"></script>
+	<script src="../src/Controller.js"></script>
+	<script src="../src/Player.js"></script>
+	<script src="../src/Box.js"></script>
+	<script src="../src/Target.js"></script>
+	<script src="../src/Tileset.js"></script>
+	<script src="../src/UserInterface.js"></script>
+	<script src="../src/Win.js"></script>
+	<script src="../src/Sokoban.js"></script>
+
+	</body>
+
+</html>

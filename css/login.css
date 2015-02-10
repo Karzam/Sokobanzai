@@ -1,0 +1,77 @@
+/* Fenêtre du navigateur */
+body {
+	background-color: #111;
+}
+
+/* Chargement de la police */ 
+@font-face {
+    font-family: "Karate";
+    src: url('karate.ttf');
+}
+
+/* Titre "Sokobanzai !" */ 
+h1 {
+	color: #800;
+	font-family: "Karate";
+	font-size: 4em;
+	padding-top: 0.4em;
+	text-align: center;
+}
+
+/* Ecran titre */ 
+#home {
+	position: absolute;
+	margin: auto;
+	border: 8px ridge #800;
+	background-image: url('../assets/background.png');
+	width: 40em;
+	height: 30em;
+	left: 25%;
+}
+
+/* Quel est votre pseudo ? */ 
+p {
+	color: #800;
+	font-family: "Karate";
+	font-size: 1.8em;
+	padding-top: 1em;
+	padding-bottom: 0.4em;
+	text-align: center;
+}
+
+/* Formulaire */ 
+form {
+	text-align: center;
+}
+
+/* Champ */ 
+#login {
+	font-size: 1.6em;
+	color: #800;
+	border: 4px solid #600;
+	border-radius: 40px;
+	margin-bottom: 1.4em;
+	text-align: center;
+	font-family: "Karate";
+	background-image: url('../assets/background.png');
+}
+
+/* Bouton de validation */
+#validation {
+	margin: auto;
+	display: block;
+	text-align: center;
+	font-family: "Karate";
+	color: #FFFFFF;
+	border-radius: 30px;
+	font-size: 1.2em;
+	border: 4px solid #600;
+	background-color: #800;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	width: 6em;
+}
+
+/* Bouton de validation survolé */
+#validation:hover {
+	background-color: #440000;
+}

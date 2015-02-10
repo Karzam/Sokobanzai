@@ -1,0 +1,188 @@
+/* Fenêtre du navigateur */
+body {
+	background-color: #111;
+}
+
+/* Chargement de la police */ 
+@font-face {
+    font-family: "Karate";
+    src: url('karate.ttf');
+}
+
+/* Fenêtre de jeu */ 
+#game {
+	margin: auto;
+	border: 8px ridge #800;
+	background-image: url('../assets/background.png');
+	width: 50em;
+	height: 38em;
+}
+
+/* Titre "Level X" */
+h1 {
+	color: #800;
+	font-family: "Karate";
+	font-size: 3em;
+	text-align: center;
+}
+
+/* Bouton de retour */ 
+.return {
+	display: inline-block;
+	font-weight: bolder;
+	float: left;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-right: -3em;
+	text-align: center;
+	font-family: "Comic Sans MS";
+	color: #FFFFFF;
+	font-size: 1.4em;
+	border: 4px solid #600;
+	border-radius: 40px;
+	padding-bottom: 1em;
+	background-color: #800;
+	width: 2em;
+	height: 2em;
+}
+
+/* Bouton de retour survolé */ 
+.return:hover {
+	background-color: #440000;
+}
+
+/* ------------------------------------ Interface --------------------------------------- */
+
+/* Interface */ 
+#interface {
+	float: right;
+	padding-right: 3.8em;
+}
+
+/* Score */
+#score {
+	color: #800;
+	font-family: "Karate";
+	font-size: 3em; 
+	padding-bottom: 0.4em; 
+}
+
+/* Texte du score */ 
+#score p {
+	display: inline-block;
+	margin-bottom: 0em;
+}
+
+/* Special feature */ 
+#special {
+	color: #800;
+	font-family: "Karate";
+	font-size: 3em;
+	padding-bottom: 0.4em;
+	padding-left: 0.3em;
+}
+
+/* Texte de la special feature */ 
+#special p {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+/* Bouton undo */ 
+#undo {
+	margin-top: 2em;
+	margin-left: 1em;
+	background: url('../assets/undo.png') no-repeat;
+	background-size: 3.6em 4em;
+	border: 4px solid #600;
+	border-radius: 40px;
+	background-color: #800;
+	width: 4.8em;
+	height: 4.8em;
+}
+
+/* Bouton undo survolé */ 
+#undo:hover {
+	background-color: #440000;
+}
+
+/* Bouton redo */ 
+#redo {
+	display: inline-block;
+	background: url('../assets/redo.png') no-repeat;
+	background-size: 3.6em 4em;
+	border: 4px solid #600;
+	border-radius: 40px;
+	background-color: #800;
+	width: 4.8em;
+	height: 4.8em;
+}
+
+/* Bouton redo survolé */ 
+#redo:hover {
+	background-color: #440000;
+}
+
+/* Bouton restart */ 
+#restart {
+	display: block;
+	margin-top: 1.2em;
+	margin-left: 3.5em;
+	background: url('../assets/restart.png') no-repeat;
+	background-size: 4em 4em;
+	border: 4px solid #600;
+	border-radius: 40px;
+	background-color: #800;
+	width: 5em;
+	height: 5em;
+}
+
+/* Bouton restart survolé */ 
+#restart:hover {
+	background-color: #440000;
+}
+
+/* ---------------------------------------- Jeu ----------------------------------------- */
+
+/* Tileset */ 
+#tileset {
+	position: absolute;
+	width: 440px;
+	height: 440px;
+	margin-left: 6em;
+	margin-top: 0.4em;
+}
+
+/* Tiles */ 
+.tile {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+}
+
+/* Player */ 
+#player {
+	z-index: 3;
+	background-image: url(../assets/player.png);
+}
+
+/* Box */ 
+.box {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+	z-index: 2;
+	background-image: url(../assets/bonzai.png);
+}
+
+/* Cibles */ 
+.target {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+	z-index: 1;
+	background-image: url(../assets/pot.png);
+}
